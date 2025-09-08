@@ -1,0 +1,35 @@
+.bar {
+  width: 16px;
+  height: 2px;
+  border-radius: 20px;
+  background-color: var(--textColor);
+}
+.menu {
+  display: none;
+  position: relative;
+}
+.menuElements {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--bg);
+  height: calc(100vh - 100px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  font-size: 36px;
+  z-index: 999;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+    cursor: pointer;
+  }
+}

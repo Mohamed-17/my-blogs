@@ -1,0 +1,61 @@
+.postTitle {
+  font-size: 22px;
+  color: var(--softTextColor);
+  font-weight: 400;
+}
+.postContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.imgContainer {
+  border-radius: 50%;
+  border: 1px solid var(--softTextColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image {
+  border-radius: 50%;
+}
+.textArea {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.poster {
+  width: fit-content;
+  padding: 4px 8px;
+  border-radius: 15px;
+  font-size: 12px;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: white;
+}
+.travel {
+  background-color: #ff7857;
+}
+.culture {
+  background-color: #ffb14f;
+}
+.food {
+  background-color: #7fb881;
+}
+.fashion {
+  background-color: #ff7887;
+}
+.content {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 13px;
+}
+.name {
+  color: var(--textColor);
+  font-size: 15px;
+  font-weight: 700;
+}
+.date {
+  color: var(--softTextColor);
+}

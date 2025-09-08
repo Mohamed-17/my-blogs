@@ -1,0 +1,57 @@
+.comment {
+  margin-block: 40px;
+}
+.commentLetter {
+  color: var(--softTextColor);
+  margin-bottom: 25px;
+}
+.write {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+.textInput {
+  width: 80%;
+  height: 80px;
+  padding: 20px;
+}
+.textInput::placeholder {
+  font-size: 16px;
+  font-weight: 500;
+}
+.send {
+  padding: 16px 20px;
+  text-align: center;
+  border: 0;
+  outline: 0;
+  color: white;
+  background-color: teal;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.commentMaker {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.newComment {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+.writer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.writer > h5 {
+  font-size: 15px;
+  color: var(--softTextColor);
+}
+.writer > p {
+  font-size: 13px;
+  color: var(--softTextColor);
+}

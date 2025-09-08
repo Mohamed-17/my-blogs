@@ -1,0 +1,38 @@
+.menuList {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.popular {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.titleSection > h2 {
+  font-size: 15px;
+  color: var(--softTextColor);
+  font-weight: 300;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.catHolder {
+  padding: 15px;
+}
+@media screen and (max-width: 1536px) {
+  .imgContainer {
+    display: none;
+  }
+  .menuList {
+    padding-left: 40px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .menuList {
+    display: none;
+  }
+}

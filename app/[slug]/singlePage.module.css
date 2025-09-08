@@ -1,0 +1,92 @@
+.post {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 60px;
+}
+.imageContainer {
+  flex: 1;
+  height: 350px;
+  position: relative;
+}
+.postInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.title {
+  font-size: 60px;
+}
+.writer {
+  display: flex;
+  gap: 20px;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.name {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--softTextColor);
+}
+.date {
+  color: var(--softTextColor);
+}
+.postDetails {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+.postDesc {
+  flex: 5;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.paragraph {
+  font-size: 19px;
+}
+@media screen and (max-width: 1536px) {
+  .title {
+    font-size: 53px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .title {
+    font-size: 33px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 25px;
+  }
+  .postInfo {
+    justify-content: center;
+  }
+  .paragraph {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .post {
+    flex-direction: column-reverse;
+    height: 50vh;
+  }
+  .imageContainer {
+    width: 100%;
+    flex: 5;
+    margin-bottom: 30px;
+  }
+  .postInfo {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .paragraph {
+    font-size: 14px;
+  }
+}

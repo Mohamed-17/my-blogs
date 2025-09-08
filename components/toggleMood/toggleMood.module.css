@@ -1,0 +1,21 @@
+.toggle {
+  background-color: var(--bg);
+  border-radius: 20px;
+  width: 40px;
+  height: 18px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  border: 1px solid var(--softTextColor);
+  margin-inline: 15px;
+  cursor: pointer;
+}
+.sircle {
+  display: block;
+  background-color: var(--textColor);
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+}

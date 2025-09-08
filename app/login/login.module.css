@@ -1,0 +1,51 @@
+.loginContainer {
+  margin-block: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 15px;
+}
+.wrapperContainer {
+  padding: 150px 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  background-color: var(--softBg);
+  border-radius: 10px;
+}
+.socialButtons {
+  padding: 20px 30px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+}
+.socialButtons:first-child {
+  background-color: #ff5555;
+}
+.socialButtons:nth-child(2) {
+  background-color: #111;
+}
+.socialButtons:nth-child(3) {
+  background-color: #087bea;
+}
+@media screen and (max-width: 768px) {
+  .wrapperContainer {
+    padding: 50px 100px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .socialButtons {
+    font-size: 14px;
+  }
+  .wrapperContainer {
+    padding: 30px;
+    gap: 50px;
+  }
+  .loginContainer {
+    margin-inline: 33px;
+  }
+}
