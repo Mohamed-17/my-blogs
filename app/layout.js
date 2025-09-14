@@ -2,7 +2,8 @@ import { Figtree } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
-import MoodToggling from "@/context/MoodToggling";
+import MoodToggling from "@/providers/MoodToggling";
+import { SessionProvider } from "next-auth/react";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -17,15 +18,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${figtree.style}`}>
-        <MoodToggling>
-          <div className="container">
-            <div className="wrapper">
-              <Navbar />
-              {children}
-              <Footer />
+        <SessionProvider>
+          <MoodToggling>
+            {" "}
+            <div className="container">
+              <div className="wrapper">
+                <Navbar />
+                {children}
+                <Footer />
+              </div>
             </div>
-          </div>
-        </MoodToggling>
+          </MoodToggling>
+        </SessionProvider>
       </body>
     </html>
   );

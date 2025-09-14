@@ -2,7 +2,7 @@
 import React, { useContext } from "react";
 import styles from "./toggleMood.module.css";
 import Image from "next/image";
-import { MoodContext } from "@/context/MoodToggling";
+import { MoodContext } from "@/providers/MoodToggling";
 function ToggleMood() {
   const { mood, onChangeMood } = useContext(MoodContext);
 

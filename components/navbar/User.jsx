@@ -1,15 +1,18 @@
 "use client";
+import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 
 function User() {
-  const [isUser, setIsUser] = useState(false);
-  if (!isUser) return <Link href={"/login"}>Login</Link>;
+  const { data, status } = useSession();
+  if (status === "unauthenticated") return <Link href={"/login"}>Login</Link>;
   return (
     <>
       {" "}
-      <Link href={"/"}>Write</Link>
-      <Link href={"/"}>Logout</Link>
+      <Link href={"/write"}>Write</Link>
+      <Link href={"/"} onClick={() => signOut()}>
+        Logout
+      </Link>
     </>
   );
 }

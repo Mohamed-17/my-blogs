@@ -4,10 +4,15 @@ import styles from "./write.module.css";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import "react-quill/dist/quill.bubble.css";
+import { useSession } from "next-auth/react";
+import { redirect } from "next/navigation";
 const ReactQuill = dynamic(() => import("react-quill-new"), { ssr: false });
 function page() {
   const [value, setValue] = useState("");
   const [open, setOpen] = useState(false);
+  const { data, status } = useSession();
+  console.log(status);
+  if (status === "unauthenticated") redirect("/");
   return (
     <div className={styles.container}>
       <input type="text" placeholder="Title" className={styles.input} />

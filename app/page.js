@@ -5,13 +5,16 @@ import CategoryList from "@/components/categoryList/CategoryList";
 import CardList from "@/components/cardList/CardList";
 import Pagination from "@/components/pagination/Pagination";
 import MenuList from "@/components/Menu/MenuList";
-function HomePage() {
+
+function HomePage({ searchParams }) {
+  console.log(searchParams.page);
+  const page = parseInt(searchParams.page) || 1;
   return (
     <>
       <Featured />
       <CategoryList img={true} />
       <div className={styles.categoryList}>
-        <CardList />
+        <CardList page={page} />
         <MenuList />
       </div>
     </>

@@ -5,7 +5,7 @@
 }
 .imageContainer {
   flex: 1;
-  height: 350px;
+  height: 400px;
   position: relative;
 }
 .postInfo {
@@ -89,4 +89,9 @@
   .paragraph {
     font-size: 14px;
   }
+}
+.noComment {
+  margin-top: 60px;
+  font-size: 20px;
+  font-weight: 600;
 }

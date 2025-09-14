@@ -55,3 +55,6 @@
   font-size: 13px;
   color: var(--softTextColor);
 }
+.sendComment {
+  margin-block: 60px;
+}
