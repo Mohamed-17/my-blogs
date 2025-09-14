@@ -7,7 +7,7 @@ import { auth } from "@/auth";
 import CreateComment from "@/components/comment/CreateComment";
 
 const getData = async (slug) => {
-  const data = await fetch(`http://localhost:3000/api/posts/${slug}`, {
+  const data = await fetch(`${process.env.NEXTAUTH_URL}api/posts/${slug}`, {
     cache: "no-store",
   });
 

@@ -2,40 +2,9 @@ import React from "react";
 import styles from "./categoryList.module.css";
 import Image from "next/image";
 import Link from "next/link";
-// const data = [
-//   {
-//     id: 1,
-//     name: "style",
-//     image: "/style.png",
-//   },
-//   {
-//     id: 2,
-//     name: "fashion",
-//     image: "/fashion.png",
-//   },
-//   {
-//     id: 3,
-//     name: "food",
-//     image: "/food.png",
-//   },
-//   {
-//     id: 4,
-//     name: "travel",
-//     image: "/travel.png",
-//   },
-//   {
-//     id: 5,
-//     name: "culture",
-//     image: "/culture.png",
-//   },
-//   {
-//     id: 6,
-//     name: "coding",
-//     image: "/coding.png",
-//   },
-// ];
+
 const getData = async () => {
-  const response = await fetch("http://localhost:3000/api/categories", {
+  const response = await fetch(`${process.env.NEXTAUTH_URL}api/categories`, {
     cache: "no-store",
   });
   if (!response.ok) throw new Error("Somthing went wrong!");

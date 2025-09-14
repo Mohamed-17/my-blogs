@@ -5,7 +5,7 @@ import Pagination from "../pagination/Pagination";
 import CardItem from "./cardItem/CardItem";
 const getPosts = async (page, cat) => {
   const response = await fetch(
-    `http://localhost:3000/api/posts?page=${page}&cat=${cat || ""}`
+    `${process.env.NEXTAUTH_URL}api/posts?page=${page}&cat=${cat || ""}`
   );
   return response.json();
 };
