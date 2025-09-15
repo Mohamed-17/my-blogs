@@ -24,7 +24,9 @@ function Menu() {
           <Link href={"/"} onClick={() => isOpen(false)}>
             About
           </Link>
-          <User />
+          <div onClick={() => isOpen(false)} className={styles.user}>
+            <User />
+          </div>
         </div>
       )}
     </div>

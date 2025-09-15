@@ -7,7 +7,7 @@ function Pagination({ page, count }) {
   const POST_PER_PAGE = 2;
   const hasPrev = page <= 1;
   const hasNext = POST_PER_PAGE * (page - 1) + POST_PER_PAGE < count;
-  console.log(page);
+
   return (
     <div className={styles.pagination}>
       <button

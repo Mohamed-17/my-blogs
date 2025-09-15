@@ -44,6 +44,7 @@ function page() {
           placeholder="Tell your story..."
         />
       </div>
+
       <button className={styles.publish}>Publish</button>
     </div>
   );

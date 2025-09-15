@@ -14,6 +14,7 @@ function MenuPost({ isImage }) {
                 src={"/culture.png"}
                 alt="culture"
                 width={60}
+                quality={60}
                 loading="lazy"
                 height={60}
                 style={{ objectFit: "cover" }}

@@ -4,6 +4,8 @@ import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 import MoodToggling from "@/providers/MoodToggling";
 import { SessionProvider } from "next-auth/react";
+import { Suspense } from "react";
+import Loading from "@/loading";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -23,9 +25,11 @@ export default function RootLayout({ children }) {
             {" "}
             <div className="container">
               <div className="wrapper">
-                <Navbar />
-                {children}
-                <Footer />
+                <Suspense fallback={<Loading />}>
+                  <Navbar />
+                  {children}
+                  <Footer />
+                </Suspense>
               </div>
             </div>
           </MoodToggling>
